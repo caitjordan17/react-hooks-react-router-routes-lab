@@ -4,12 +4,12 @@ import { directors } from "../data";
 function Directors() {
   
   const directorsList = directors.map((director) => (
-    <div>
+    <div key={director.name}>
       <h3>Name: {director.name}</h3>
       <p>Movies:</p>
       <ul>
         {director.movies.map((movie) => (
-          <li>{movie}</li>
+          <li key={movie}>{movie}</li>
         ))}
       </ul>
     </div>
